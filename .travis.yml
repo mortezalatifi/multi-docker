@@ -14,7 +14,7 @@ after_success:
     - docker build -t latifiemami/multi-server ./server
     - docker build -t latifiemami/multi-worker ./worker
     # Log in to the docker CLI
-    - docker login -u "$DOCKER_ID" -p "DOCKER_PASS" docker.io
+    - docker login -u "$DOCKER_ID" -p "$DOCKER_PASS" docker.io
     # Take those images and push them to the docker hub
     - docker push latifiemami/multi-client
     - docker push latifiemami/multi-nginx
